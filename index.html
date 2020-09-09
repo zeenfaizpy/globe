@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta property="og:image" content="resources/fp_icon.jpg" />
         <meta property="og:description" content="A WebGL implementation of the Encom Boardroom visualization in Tron: Legacy" />
-        <title>Encom Globe</title>
+        <title>Ghalib Satellite Launch</title>
 
         <!-- these are just for the demo page / options -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -118,6 +118,14 @@
                         }
                     });
 
+                    /*** Satellite ***/
+                    var opts = {
+                        coreColor: $("#satellite-color").val(),
+                        numWaves: parseInt($("#globe-si").val())
+                    };
+                    globe.addSatellite(21.3866417, 51.6566685, parseFloat($("#globe-sa").val()), opts);
+                    /*** Satellite ***/
+
                     $("#add-element li").click(function(e){
                         $("#add-element li").removeClass("selected");
                         $(e.currentTarget).addClass("selected");
@@ -166,12 +174,9 @@
 
                     /* add the connected points that are in the movie */
                     setTimeout(function(){
-                        //globe.addMarker(49.25, -123.1, "Vancouver");
-                        //globe.addMarker(35.6895, 129.69171, "Tokyo", true);
-
-                        globe.addMarker(37.9681279, -122.6066613, "NiCasio");
-                        globe.addMarker(40.7765233, -112.0605687, "Salt Lake City");
-                        globe.addMarker(25.0750853, 54.9475566, "Dubai", true);
+                        //globe.addMarker(37.9681279, -122.6066613, "NiCasio");
+                        //globe.addMarker(40.7765233, -112.0605687, "Salt Lake City");
+                        //globe.addMarker(25.0750853, 54.9475566, "Dubai", true);
                     }, 2000);
                 }
 
