@@ -7,8 +7,8 @@
         <title>Encom Globe</title>
 
         <!-- these are just for the demo page / options -->
-        <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
         <script src="include/spectrum.js"></script>
         <link href="include/spectrum.css" rel="stylesheet" type="text/css" />
         <script src="include/jquery.switchButton.js"></script>
@@ -135,7 +135,7 @@
                            lon = Math.random() * 360 - 180,
                            name = "Test " + Math.floor(Math.random() * 100);
 
-                        globe.addPin(lat,lon, name);
+                        //globe.addPin(lat,lon, name);
 
                     }, 5000);
                 }
@@ -161,13 +161,17 @@
                             }
                         }
 
-                        globe.addConstellation(constellation, opts);
+                        //globe.addConstellation(constellation, opts);
                     }, 4000);
 
                     /* add the connected points that are in the movie */
                     setTimeout(function(){
-                        globe.addMarker(49.25, -123.1, "Vancouver");
-                        globe.addMarker(35.6895, 129.69171, "Tokyo", true);
+                        //globe.addMarker(49.25, -123.1, "Vancouver");
+                        //globe.addMarker(35.6895, 129.69171, "Tokyo", true);
+
+                        globe.addMarker(37.9681279, -122.6066613, "NiCasio");
+                        globe.addMarker(40.7765233, -112.0605687, "Salt Lake City");
+                        globe.addMarker(25.0750853, 54.9475566, "Dubai", true);
                     }, 2000);
                 }
 
@@ -399,15 +403,13 @@
     <body>
         <div id="container">
             <div id="banner">
-                Encom Globe
-                <small>by <a href="http://twitter.com/arscan">@arscan</a></small>
-
+                Ghalib Satellite Launch
             </div>
             <div id="globe">
             </div>
-            <div id="info-box">
+            <!--<div id="info-box">
                 A tribute to the <a href="http://work.gmunk.com/TRON-Board-Room">boardroom scene</a> in Disney's <a href="http://www.imdb.com/title/tt1104001/">Tron: Legacy</a>.  Built for reuse. Source on <a href="http://github.com/arscan/encom-globe/" class="github-link">Github</a>.
-            </div>
+            </div>-->
             <div id="options">
                 <div id="options-content">
                     <h3>Add element by clicking map below</h3>
